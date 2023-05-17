@@ -21,6 +21,7 @@
       let t = 1
       let l = []
       let a = 1
+      const time = parseInt(document.getElementById('time').value)
       const no = parseInt(document.getElementById('No').value)
       while (a <= no) {
         l.push(Math.floor(Math.random() * 1000))
@@ -31,7 +32,7 @@
         setTimeout(() => {
           window.open(URL, '_blank')
         }, t * 1000);
-        t += 5
+        t += time
         i += 1
       }
     }
