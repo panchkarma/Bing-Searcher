@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link type="image/png" sizes="16x16" rel="icon" href="./logo.png">
+  <title>Bing Searcher</title>
+</head>
+
+<body>
+  <h1>Free Binger</h1>
+  by Sudhanshu <br><br>
+  No. of Search :
+  <input type="number" name="No" id="No">
+  <button onclick="myFunction()">Random Search</button><br><br>
+  Time Interval Per Search : <input type="number" value="5" id="time"><br>
+  Note : For Slow PC Time Interval > 5 is recommened, as lower time interval results lag
+  <script>
+    function myFunction() {
+      let i = 1
+      let t = 1
+      let l = []
+      let a = 1
+      const no = parseInt(document.getElementById('No').value)
+      while (a <= no) {
+        l.push(Math.floor(Math.random() * 1000))
+        a += 1
+      }
+      while (i <= no) {
+        let URL = 'https://www.bing.com/search?q=' + `${l[i - 1]}`
+        setTimeout(() => {
+          window.open(URL, '_blank')
+        }, t * 1000);
+        t += 5
+        i += 1
+      }
+    }
+  </script>
+</body>
+
+</html>
