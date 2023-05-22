@@ -1,9 +1,11 @@
-html,body {
-    border-color: #736b5e;
-    color: #e8e6e3;
-    background-color: #181a1b;
-    height: 50%;
+html,
+body {
+  border-color: #736b5e;
+  color: #e8e6e3;
+  background-color: #181a1b;
+  height: 50%;
 }
+
 html {
     color-scheme: dark !important;
 }
@@ -17,4 +19,10 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.pInput {
+  border-color: rgb(97, 95, 95);
+  border-width: 2px;
+
 }
